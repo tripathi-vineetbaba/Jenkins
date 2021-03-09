@@ -1,8 +1,9 @@
 pipeline{
   agent any{
-  stages{
-  steps{
-  echo "This is First Jenkins File"}
-  }
+    stages{
+      stage('Build'){
+        steps{
+          echo "This is First Jenkins File"}
+      }}
   }
   }
