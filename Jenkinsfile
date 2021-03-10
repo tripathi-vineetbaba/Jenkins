@@ -1,9 +1,10 @@
-pipeline{
-  agent {any}
-    stages{
-      stage('Build'){
-        steps{
-          echo "This is First Jenkins File"}
-      }
-  }
-  }
+pipeline {
+    agent { any }
+    stages {
+        stage('build') {
+            steps {
+                echo "Hello World!"
+            }
+        }
+    }
+}
