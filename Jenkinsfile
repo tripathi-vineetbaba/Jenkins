@@ -18,10 +18,11 @@ pipeline{
          mkdir file
          ls -ltr
          '''
+          sh 'rmdir timeoutfile'
         }
         timeout(time: 20, unit: 'SECONDS'){
+          
           sh 'sleep 40'
-          sh 'rmdir timeoutfile'
           sh 'mkdir timeoutfile'
           sh 'ls -ltr'
         }
