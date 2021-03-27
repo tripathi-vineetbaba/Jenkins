@@ -19,6 +19,7 @@ pipeline{
          '''
         }
         timeout(time: 20, unit: 'SECONDS'){
+          sh 'sleep 40'
           sh 'mkdir timeoutfile'
           sh 'ls -ltr'
         }
