@@ -10,5 +10,20 @@ pipeline{
         '''
       }
     }
+    stage('Deploy'){
+      steps{
+        retry(3){
+         sh '''
+         mkdir file
+         ls -ltr
+         '''
+        }
+        timeout(time: 20, unit: 'SECONDS'){
+          sh 'mkdir timeoutfile'
+          sh 'ls -ltr'
+        }
+    
+    }
+                   }
   }
 }
