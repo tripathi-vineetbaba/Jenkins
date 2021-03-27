@@ -14,12 +14,14 @@ pipeline{
       steps{
         retry(3){
          sh '''
+         rmdir file
          mkdir file
          ls -ltr
          '''
         }
         timeout(time: 20, unit: 'SECONDS'){
           sh 'sleep 40'
+          sh 'rmdir timeoutfile'
           sh 'mkdir timeoutfile'
           sh 'ls -ltr'
         }
