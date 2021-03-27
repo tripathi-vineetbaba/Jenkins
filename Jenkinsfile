@@ -28,3 +28,17 @@ pipeline{
                    }
   }
 }
+post {
+  always{
+  echo 'This is always run post parameter'
+  }
+  changed{
+  echo "This is expected to run this time as build status is changed"
+  }
+  success{
+  echo "This nuild is successfull"
+  }
+  failure{
+    echo "This is failed build"
+}
+}
