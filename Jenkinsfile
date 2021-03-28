@@ -5,7 +5,7 @@ pipeline{
       steps{
         sh 'echo Hello World'
         sh '''
-        echo Multiline shell script works too
+        echo Multiline shell script works too  in Pipeline1.
         ls -ltr
         '''
       }
@@ -17,6 +17,7 @@ pipeline{
          rmdir file
          mkdir file
          ls -ltr
+         echo "Pipeline1"
          '''
           sh 'rmdir timeoutfile'
         }
