@@ -1,0 +1,16 @@
+{
+"CheckboxParameter": [
+    {
+      "key": "repo1",
+      "value": "value-1"
+    },
+    {
+      "key": "repo-2",
+      "value": "value-2"
+    },
+    {
+      "key": "repo-3",
+      "value": "value-3"
+    }
+  ]
+}
