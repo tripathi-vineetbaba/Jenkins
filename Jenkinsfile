@@ -1,13 +1,13 @@
 pipeline {
-  agent any
-  parameters {
-    gitParameter(branch: '', branchFilter: '.*', defaultValue: 'dev1', description: '', name: 'BRANCH')
-  }
-  stages {
-    stage('Example') {
-      steps {
-        sh('echo ${STATEMENT}')
-      }
+    agent any
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
     }
-  }
+    stages {
+        stage('Example') {
+            steps {
+                echo "${params.Greeting} World!"
+            }
+        }
+    }
 }
