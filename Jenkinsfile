@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-    string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
+    gitParameter(branch: '', branchFilter: '.*', defaultValue: 'dev1', description: '', name: 'BRANCH')
   }
   stages {
     stage('Example') {
