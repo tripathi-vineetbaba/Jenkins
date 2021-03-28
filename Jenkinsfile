@@ -21,11 +21,13 @@ pipeline {
         stage('Deploy') {
             when{
                 expression{
-                  currentBuild.result == null || currentBuild.result == 'SUCCESS'}}
+                  currentBuild.result == null || currentBuild.result == 'SUCCESS' }
+            }
             steps {
                 echo 'Deploying....'
                 echo 'Env Variable : $DEPLOY_VARIABLE' 
-                echo ' Environment Details : Build ID=${env.BUILD_ID} on Build Number = ${env.BUILD_NUMBER} with Java Home = ${env.JAVA_HOME} and Jobname= ${env.JOB_NAME and workspace = ${WORKSPACE}}
+                echo ' Environment Details : Build ID=${env.BUILD_ID} on Build Number = ${env.BUILD_NUMBER} with Java Home = ${env.JAVA_HOME} and Jobname= ${env.JOB_NAME and workspace = ${WORKSPACE}
+            }
             }
         }
     }
