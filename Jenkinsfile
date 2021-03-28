@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice('Jenkins', 'Jenkins-1', 'Jenkins-2', description: '''Select any 1 repo from these 3:
+        choice(choices: ['Jenkins', 'Jenkins-1', 'Jenkins-2'], description: '''Select any 1 repo from these 3:
           Jenkins
           Jenkins-Temp
           Jenkins-Temp2''', name: 'Jenkins Repo')
