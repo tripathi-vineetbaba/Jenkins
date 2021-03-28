@@ -3,11 +3,10 @@ pipeline {
 parameters {
   choice choices: ['deveop', '$another'], description: '', name: 'Myproject1'
 }
-    }
     stages {
         stage('Example') {
             steps {
-                echo "${params.Greeting} World!"
+                echo "${params.Myproject1} World!"
             }
         }
     }
